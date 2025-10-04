@@ -1,10 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <style name="Theme.MyApplication" parent="Theme.AppCompat.Light.NoActionBar">
-        <!-- Primary colors -->
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="Theme.MyApplication" parent="Theme.Material3.DayNight.NoActionBar">
         <item name="colorPrimary">@color/purple_500</item>
-        <item name="colorPrimaryDark">@color/purple_700</item>
-        <item name="colorAccent">@color/teal_200</item>
+        <item name="colorOnPrimary">@android:color/white</item>
+        <item name="colorPrimaryContainer">@color/purple_700</item>
+        <item name="colorSecondary">@color/teal_200</item>
         <item name="android:windowBackground">@android:color/white</item>
+
+        <!-- REMOVE this line if you had it:
+        <item name="materialToolbarStyle">@style/Widget.Material3.Toolbar</item>
+        -->
+        <!-- (Optional) keep status/nav colors if you like -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimary</item>
+        <item name="android:navigationBarColor" tools:targetApi="l">@android:color/black</item>
     </style>
 </resources>

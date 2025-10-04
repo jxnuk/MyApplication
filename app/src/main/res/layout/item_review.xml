@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="16dp"
+    app:cardUseCompatPadding="true"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="6dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <!-- Title -->
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Where can I get some?"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:lineSpacingExtra="2dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <!-- Body -->
+        <TextView
+            android:id="@+id/tvBody"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text="There are many variations of passages of Lorem Ipsum available..."
+            android:textSize="14sp"
+            android:lineSpacingExtra="2dp"
+            app:layout_constraintTop_toBottomOf="@id/tvTitle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <!-- Image keeps original aspect. No fixed dp height. -->
+        <ImageView
+            android:id="@+id/imgThumb"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/special"
+            app:layout_constraintTop_toBottomOf="@id/tvBody"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <!-- Helpful row -->
+        <TextView
+            android:id="@+id/tvHelpful"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="Helpful?"
+            android:textSize="14sp"
+            app:layout_constraintTop_toBottomOf="@id/imgThumb"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <ImageButton
+            android:id="@+id/btnYes"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="8dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_check_24"
+            android:contentDescription="Mark helpful"
+            app:layout_constraintStart_toEndOf="@id/tvHelpful"
+            app:layout_constraintBottom_toBottomOf="@id/tvHelpful"
+            app:layout_constraintTop_toTopOf="@id/tvHelpful"/>
+
+        <ImageButton
+            android:id="@+id/btnNo"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="6dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_close_24"
+            android:contentDescription="Mark not helpful"
+            app:layout_constraintStart_toEndOf="@id/btnYes"
+            app:layout_constraintBottom_toBottomOf="@id/tvHelpful"
+            app:layout_constraintTop_toTopOf="@id/tvHelpful"/>
+
+        <!-- Author -->
+        <TextView
+            android:id="@+id/tvAuthor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Author: Karin Seal"
+            android:textSize="12sp"
+            app:layout_constraintTop_toBottomOf="@id/tvHelpful"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>

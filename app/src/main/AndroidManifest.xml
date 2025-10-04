@@ -21,13 +21,13 @@
 
         <activity android:name=".MainActivity"
                 android:exported="false">
-
         </activity>
         <activity android:name=".CommunityActivity"
             android:exported="false">
-
         </activity>
-        <!-- Add other activities here -->
+        <activity android:name=".CreateUserActivity"
+            android:exported="false">
+        </activity>
 
     </application>
 
